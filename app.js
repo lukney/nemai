@@ -6,10 +6,10 @@ var bodyParser = require('body-parser');
 
 //start mysql connection
 var connection = mysql.createConnection({
-  host     : 'localhost', //mysql database host name
-  user     : 'root', //mysql database user name
-  password : '', //mysql database password
-  database : 'nemai', //mysql database name
+  host     : 'nemai1234.cyelmj7smxyj.us-east-1.rds.amazonaws.com', //mysql database host name
+  user     : 'nemai1234', //mysql database user name
+  password : 'nemai1234', //mysql database password
+  database : 'nemai1234', //mysql database name
   port     : '3306'  
 });
 
@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 //create app server
 var server = app.listen(3008,   function () {
 
-  var host = server.address().address
+  var host = 'ec2-54-147-43-135.compute-1.amazonaws.com'
   var port = server.address().port
 
   console.log("Example app listening at http://%s:%s", host, port)
